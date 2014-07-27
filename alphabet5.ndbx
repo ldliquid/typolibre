@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="18" type="file" uuid="218b8859-f96e-42ef-a002-8879b5544936">
+    <property name="canvasHeight" value="1000"/>
+    <property name="canvasWidth" value="1000"/>
+    <property name="canvasX" value="0"/>
+    <property name="canvasY" value="0"/>
+    <node name="root" prototype="core.network" renderedChild="arc1">
+        <node name="arc1" position="8.00,7.00" prototype="corevector.arc">
+            <port name="width" type="float" value="10.0"/>
+            <port name="height" type="float" value="157.0"/>
+            <port name="start_angle" type="float" value="188.0"/>
+            <port name="degrees" type="float" value="278.0"/>
+            <port name="type" type="string" value="chord"/>
+        </node>
+        <node name="ellipse1" position="3.00,7.00" prototype="corevector.ellipse">
+            <port name="width" type="float" value="6.0"/>
+            <port name="height" type="float" value="51.0"/>
+        </node>
+        <node name="scatter1" position="3.00,3.00" prototype="corevector.scatter">
+            <port name="amount" type="int" value="584"/>
+            <port name="seed" type="int" value="23"/>
+        </node>
+        <node name="textpath1" position="3.00,1.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="H e l l o H e l l o H e l l o H e l l o H e l l o H e l l o "/>
+            <port name="font_name" type="string" value="Whois-mono"/>
+            <port name="font_size" type="float" value="196.0"/>
+            <port name="position" type="point" value="59.00,-152.00"/>
+            <port name="width" type="float" value="1009.0"/>
+        </node>
+        <conn input="scatter1.shape" output="textpath1"/>
+        <conn input="arc1.position" output="scatter1"/>
+    </node>
+</ndbx>
